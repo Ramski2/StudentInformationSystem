@@ -13,9 +13,9 @@ import javax.swing.table.TableRowSorter;
 
 public class GUI extends JFrame {
 
-    static String[] file = {"csv/Student.csv"
-            , "csv/Program.csv"
-            , "csv/College.csv"};
+    static String[] file = {"SSIS/csv/Student.csv"
+            , "SSIS/csv/Program.csv"
+            , "SSIS/csv/College.csv"};
 
     JTabbedPane tab = new JTabbedPane();
     String[] column;
@@ -132,7 +132,11 @@ public JPanel PanelLayout(String f) {
             List<String[]> data = csvHandler.readCSV();
 
             for (String[] row : data) {
-                model.addRow(row);
+                String[] cleanRow = new String[row.length];
+                for (int i = 0; i < row.length; i++) {
+                    cleanRow[i] = (row[i].equals("null") || row[i].trim().isEmpty()) ? "N/A" : row[i];
+                }
+                model.addRow(cleanRow);
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error loading data: " + e.getMessage());
@@ -147,7 +151,7 @@ public JPanel PanelLayout(String f) {
             List<String[]> refCSV = ref.readCSV();
             for (String[] refData : refCSV) {
                 if (refData[refData.length - 1].equals(refval)) {
-                    refData[refData.length - 1] = "None";
+                    refData[refData.length - 1] = null;
                 }
             }
             ref.writeCSV(refCSV);

@@ -93,7 +93,6 @@ public class Update implements ActionListener {
                 GUI.loadData(model, csvHandler);
                 GUI.updateReferences(delVal, f);
                 Fields.clearFields(fields);
-
             JOptionPane.showMessageDialog(null, "Updated Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
 
         }

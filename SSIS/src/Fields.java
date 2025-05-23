@@ -27,7 +27,7 @@ public class Fields {
             JFormattedTextField field = new JFormattedTextField(format());
 
             int curryear = Year.now().getValue();
-            String idNum = getIncrement(curryear, f);
+            String idNum = getIncrement(curryear);
             field.setText(curryear + idNum);
             fields.add(field);
 
@@ -109,8 +109,6 @@ public class Fields {
         CSVHandler newCSV = new CSVHandler(file[index]);
         List<String[]> cData = newCSV.readCSV();
         for (String[] c : cData) {
-            System.out.println(Arrays.toString(c));
-            System.out.printf("Comparing: '%s' with '%s'%n", selectedItem, c[0]);
             if (selectedItem.equals(c[0])) {
                 return false;
             }
@@ -120,7 +118,6 @@ public class Fields {
 
     public static boolean validateID(String data) {
         String[] id = data.split("-");
-        System.out.println(id[1]);
 
         try {
             int year = Integer.parseInt(id[0]);
@@ -136,16 +133,21 @@ public class Fields {
 
     public static void clearFields(List<JComponent> fields) {
         for (JComponent tfield : fields) {
-            if (tfield instanceof JTextField) {
+            if (tfield instanceof JFormattedTextField){
+                int curryear = Year.now().getValue();
+                String idNum = getIncrement(curryear);
+                ((JFormattedTextField) tfield).setText(curryear + idNum);
+            }
+            if (tfield instanceof JTextField && !(tfield instanceof JFormattedTextField)) {
                 ((JTextField) tfield).setText("");
             } else if (tfield instanceof JComboBox<?>) {
-                ((JComboBox<?>) tfield).setSelectedItem(-1);
+                ((JComboBox<?>) tfield).setSelectedIndex(0);
             }
         }
     }
 
-    private String getIncrement(int year, String f) {
-        CSVHandler csvHandler = new CSVHandler(f);
+    private static String getIncrement(int year) {
+        CSVHandler csvHandler = new CSVHandler(file[0]);
         List<String[]> csvData = csvHandler.readCSV();
         int maxNum = 0;
 
@@ -178,7 +180,6 @@ public class Fields {
 
         CSVHandler csvHandler = new CSVHandler(file[index]);
         String[] data = csvHandler.readHeaders();
-        System.out.println(data.length);
         List<JComponent> fields = new ArrayList<>();
         List<JLabel> labels = new ArrayList<>();
 

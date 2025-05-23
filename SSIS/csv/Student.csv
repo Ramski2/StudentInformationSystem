@@ -9,8 +9,8 @@ Student ID,First Name,Last Name,Gender,Year Level,Course
 2022-0223,Michael,Davis,Male,1,BSBA
 2022-0258,Lily,Brown,Female,1,BSCS
 2022-0261,James,Johnson,Male,1,BSED
-2022-0271,William,White,Male,1,None
-2022-0299,Samuel,Scott,Male,1,None
+2022-0271,William,White,Male,1,BSA
+2022-0299,Samuel,Scott,Male,1,BSBio
 2022-0321,Sophia,Rodriguez,Female,1,BSED
 2022-0380,Jack,Harris,Male,2,BSIT
 2022-0415,William,Lee,Male,1,BSED
@@ -36,7 +36,7 @@ Student ID,First Name,Last Name,Gender,Year Level,Course
 2023-0381,Benjamin,Thomas,Male,1,BSED
 2023-0394,Benjamin,Moore,Male,2,BSCS
 2023-0411,Daniel,Martinez,Male,2,BSED
-2023-0445,Maria,Johnson,Female,3,None
+2023-0445,Maria,Johnson,Female,3,BSCA
 2023-0457,Wyatt,Walker,Male,2,BSECE
 2023-0468,William,Nelson,Male,2,BSN
 2023-0473,Ram Clyde,Gamboa,Male,2,BSCS
@@ -47,7 +47,7 @@ Student ID,First Name,Last Name,Gender,Year Level,Course
 2024-0018,Ava,Lewis,Female,3,BSBA
 2024-0098,Noah,Scott,Male,3,BSBA
 2024-0110,Sophia,Thompson,Female,3,BSIT
-2024-0149,Grace,Sanchez,Female,3,None
+2024-0149,Grace,Sanchez,Female,3,BSECE
 2024-0185,Daniel,Taylor,Male,2,BSCS
 2024-0187,Matthew,Harris,Male,3,BSN
 2024-0198,James,Turner,Male,3,BSECE
@@ -63,7 +63,7 @@ Student ID,First Name,Last Name,Gender,Year Level,Course
 2024-0435,Chloe,Hall,Female,2,BSN
 2024-0444,Michael,Carter,Male,3,BSCS
 2024-0450,Mason,Evans,Male,2,BSECE
-2024-0462,Lily,Hall,Female,3,None
+2024-0462,Lily,Hall,Female,3,BSBio
 2024-0502,Ava,Jackson,Female,2,BSIT
 2024-0543,David,Martinez,Male,2,BSIT
 2024-0554,Lily,Gonzalez,Female,3,BSTM
@@ -81,7 +81,7 @@ Student ID,First Name,Last Name,Gender,Year Level,Course
 2025-0279,Emily,Brown,Female,4,BSECE
 2025-0287,Sophia,Adams,Female,4,BSCS
 2025-0304,Samuel,Allen,Male,4,BSBA
-2025-0311,Olivia,Edwards,Female,4,None
+2025-0311,Olivia,Edwards,Female,4,BSBio
 2025-0325,Alexander,Perez,Male,4,BSBA
 2025-0334,Lily,Carter,Female,4,BSBA
 2025-0356,Bella,Edwards,Female,4,BSTM
@@ -96,7 +96,6 @@ Student ID,First Name,Last Name,Gender,Year Level,Course
 2025-0514,Noah,Evans,Male,4,BSTM
 2025-0531,Emma,Clark,Female,4,BSCS
 2025-0547,Grace,Lewis,Female,4,BSBA
-2025-0548,ewrqwe,rqwerqwe,Female,2,BSBA
-2025-0549,fdsafa,sdadsfad,Male,2,None
-2025-0550,asfasd,asdfasdf,Female,1,None
-2000-3423,fasdf,adsdfasd,Other,2,None
+2025-0549,Test,Test2,Male,2,test
+2025-0550,TEST,TEST,Other,2,test
+2000-3423,Test3,Test3,Other,2,test
